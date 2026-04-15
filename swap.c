@@ -35,7 +35,8 @@ void	sa(t_ps *ps)
 		ps->bench.sa++;
 		ps->bench.count++;
 	}
-	write(1, "sa\n", 3);
+	if (ps->op_on)
+		write(1, "sa\n", 3);
 }
 
 void	sb(t_ps *ps)
@@ -48,7 +49,8 @@ void	sb(t_ps *ps)
 		ps->bench.sb++;
 		ps->bench.count++;
 	}
-	write(1, "sb\n", 3);
+	if (ps->op_on)
+		write(1, "sb\n", 3);
 }
 
 void	ss(t_ps *ps)
@@ -62,5 +64,6 @@ void	ss(t_ps *ps)
 		ps->bench.ss++;
 		ps->bench.count++;
 	}
-	write(1, "ss\n", 3);
+	if (ps->op_on)
+		write(1, "ss\n", 3);
 }

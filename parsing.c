@@ -37,6 +37,11 @@ static int	flags(const char *av, t_ps *ps)
 		ps->flag = 0;
 		return (0);
 	}
+	if (ft_strcmp(av, "--op_on") == 0)
+	{
+		ps->op_on = true;
+		return (1);
+	}
 	return (-1);
 }
 

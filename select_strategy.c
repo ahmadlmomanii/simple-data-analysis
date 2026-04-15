@@ -27,7 +27,9 @@ void	select_strategy(t_ps *ps)
 
 void	execute_sort(t_ps *ps)
 {
-	if (ps->flag == 1)
+	if (ps->size_a <= 10)
+		sort_simple(ps);
+	else if (ps->flag == 1)
 		sort_simple(ps);
 	else if (ps->flag == 2)
 		sort_medium(ps);

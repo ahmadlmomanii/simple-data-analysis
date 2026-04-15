@@ -54,6 +54,7 @@ typedef struct s_ps
 	int				flag;
 	bool			bench_on;
 	bool			is_adaptive;
+	bool			op_on;
 }					t_ps;
 /* ================= STATS ================*/
 double get_mean(int *arr, int size);

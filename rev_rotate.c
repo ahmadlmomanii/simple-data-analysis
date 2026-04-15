@@ -40,7 +40,8 @@ void	rra(t_ps *ps)
 		ps->bench.rra++;
 		ps->bench.count++;
 	}
-	write(1, "rra\n", 4);
+	if (ps->op_on)
+		write(1, "rra\n", 4);
 }
 
 void	rrb(t_ps *ps)
@@ -53,7 +54,8 @@ void	rrb(t_ps *ps)
 		ps->bench.rrb++;
 		ps->bench.count++;
 	}
-	write(1, "rrb\n", 4);
+	if (ps->op_on)
+		write(1, "rrb\n", 4);
 }
 
 void	rrr(t_ps *ps)
@@ -67,5 +69,6 @@ void	rrr(t_ps *ps)
 		ps->bench.rrr++;
 		ps->bench.count++;
 	}
-	write(1, "rrr\n", 4);
+	if (ps->op_on)
+		write(1, "rrr\n", 4);
 }

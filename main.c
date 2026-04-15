@@ -20,6 +20,7 @@ static void	init_ps(t_ps *ps)
 	ps->size_b = 0;
 	ps->flag = 0;
 	ps->bench_on = false;
+	ps->op_on = false;
 	ps->is_adaptive = 0;
 	ps->bench = (t_bench){0};
 }
